@@ -6,5 +6,6 @@ namespace SodaMachine
 {
     class SodaGame
     {
+
     }
 }

@@ -13,7 +13,7 @@ namespace SodaMachineOOP
         MoneyHolder moneyHolder;
         public double amountEntered;
         public double amountRequired;
-        public string userInput;
+        public string inputGiving;
 
 
 
@@ -72,7 +72,21 @@ namespace SodaMachineOOP
             else EnterMoney();
         }
 
-        // add buy soda methods
+        // add buy soda method
+
+        public void BuySoda()
+        {
+            Console.WriteLine("What would you like to buy ? Orange Soda ? Grape Soda ? Lemon Soda ?");
+            string inputGiving = Console.ReadLine().ToLower();
+            amountRequired = 0.35;
+            if(inputGiving == "orange")
+            {
+                if(amountEntered == amountRequired && inventory.orangeSodas.Count > 0)
+                {
+                    Console.WriteLine("Crush soda coming down !");
+                } 
+            }
+        }
      
             
        
