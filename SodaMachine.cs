@@ -7,15 +7,21 @@ namespace SodaMachineOOP
     class SodaMachine
     {
         // member variables (Has a)
+        public List<Penny> Pennys;
+        public List<Sanitizer> Sanitizers;
 
 
 
-       //  constructor (Spawner)
+
+
+        //  constructor (Spawner)
+
+        Pennys =
+        
 
 
 
-
-      // member methods (Can do)
+        // member methods (Can do)
 
 
     }
