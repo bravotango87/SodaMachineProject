@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SodaMachine;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SodaMachineOOP
 {
-    class Nickel
+    class Nickel : Money
     {
 
 
@@ -14,7 +15,10 @@ namespace SodaMachineOOP
 
         //  constructor (Spawner)
 
-
+        public Nickel()
+        {
+            cost = 0.5;
+        }
 
 
         // member methods (Can do)

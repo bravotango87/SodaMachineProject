@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SodaMachine;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SodaMachineOOP
 {
-    class Quarter
+    class Quarter : Money
     {
 
         // member variables (Has a)
@@ -13,7 +14,10 @@ namespace SodaMachineOOP
 
         //  constructor (Spawner)
 
-
+        public Quarter()
+        {
+            cost = .25;
+        }
           
 
         // member methods (Can do)

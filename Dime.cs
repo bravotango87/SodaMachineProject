@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SodaMachine;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SodaMachineOOP
 {
-    class Dime
+    class Dime : Money
     {
 
         // member variables (Has a)
@@ -13,7 +14,10 @@ namespace SodaMachineOOP
 
         //  constructor (Spawner)
 
-
+        public Dime()
+        {
+            cost = 0.10;
+        }
 
 
         // member methods (Can do)
