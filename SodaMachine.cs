@@ -72,13 +72,8 @@ namespace SodaMachineOOP
             else EnterMoney();
         }
 
-
-        public void BuySoda() /// if statement or switch case statement to buy a drink.
-        {
-
-        }
-
-    }
+        // add buy soda methods
+     
             
        
         
