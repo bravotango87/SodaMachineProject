@@ -4,7 +4,12 @@ using System.Text;
 
 namespace SodaMachine
 {
-    class OrangeSoda
+    class OrangeSoda : Sodas
     {
+        public OrangeSoda()
+        {
+            ProductName = "Crush";
+            Price = 35;
+        }
     }
 }
