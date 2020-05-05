@@ -11,6 +11,11 @@ namespace SodaMachineOOP
 
         Inventory inventory;
         MoneyHolder moneyHolder;
+        public double amountEntered;
+        public double amountRequired;
+        public string userInput;
+       
+
 
 
 
@@ -30,35 +35,43 @@ namespace SodaMachineOOP
             moneyHolder.AddPennys(50);
             moneyHolder.AddQuarters(20);
         }
-        
+
 
 
 
         // member methods (Can do)
 
-        public void RunWelcomeScreen()
+        public void EnterMoney()
         {
-            Console.WriteLine("Welcome To Brads Soda Machine !");
-
-            bool transactionComplete = false;
-            bool validPurchase = false;
-            while (transactionComplete == false)
+            Console.WriteLine("Please enter a Penny, Nickle, Dime, Quarter, Cancel");
+            string userInput = Console.ReadLine().ToLower();
+            if (userInput == "penny")
             {
-                do
-                {
-                    Console.WriteLine("What would you like to buy ? Orange Soda ? Lemon Soda ? Grape Soda ?");
-                    string userInput = Console.ReadLine().ToLower();
-                    switch (userInput)
-                    {
-                        case "orange soda":
-                            AddLemonSoda();
-                            validPurchase = true;
-                            break;
-                            
-                    }
-                }
+                moneyHolder.AddPennys(1);
+                amountEntered = 0.01;
             }
-        }
+            else if (userInput == "nickle")
+            {
+                moneyHolder.AddNickles(1);
+                amountEntered = 0.05;
+            }
+            else if (userInput == "dime")
+            {
+                moneyHolder.AddDimes(1);
+                amountEntered = 0.10;
+            }
+            else if (userInput == "quarter")
+            {
+                moneyHolder.AddQuarters(1);
+                amountEntered = 0.25;
+            }
+            else if (userInput == "cancel")
+            {
+                return;
+            }
+            else EnterMoney();
+            
+            
        
         
     }
