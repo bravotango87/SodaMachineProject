@@ -21,15 +21,38 @@ namespace SodaMachine
             lemonSodas = new List<LemonSoda>();
             orangeSodas = new List<OrangeSoda>();
             grapeSodas = new List<GrapeSoda>();
-            FillMachine();
+            
               
         }
 
      // member methods (Can do)
 
-       public void FillMachine()
+       public void AddLemonSoda(int cansOfLemon)
         {
+            for (int i = 0; i < cansOfLemon; i++)
+            {
+                LemonSoda lemonSoda = new LemonSoda();
+                lemonSodas.Add(lemonSoda);
 
+            }
+        }
+
+        public void AddOrangeSoda(int cansofOrange)
+        {
+            for (int i = 0; i < cansofOrange; i++)
+            {
+                OrangeSoda orangeSoda = new OrangeSoda();
+                orangeSodas.Add(orangeSoda);
+            }
+        }
+
+        public void AddGrapeSoda(int cansOfGrape)
+        {
+            for (int i = 0; i < cansOfGrape; i++)
+            {
+                GrapeSoda grapeSoda = new GrapeSoda();
+                grapeSodas.Add(grapeSoda);
+            }
         }
 
     }
