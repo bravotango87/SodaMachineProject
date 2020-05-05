@@ -14,7 +14,7 @@ namespace SodaMachineOOP
         public double amountEntered;
         public double amountRequired;
         public string userInput;
-       
+
 
 
 
@@ -22,7 +22,7 @@ namespace SodaMachineOOP
 
         //  constructor (Spawner)
 
-      public SodaMachine()
+        public SodaMachine()
         {
             inventory = new Inventory();
             inventory.AddGrapeSoda(32);
@@ -70,9 +70,17 @@ namespace SodaMachineOOP
                 return;
             }
             else EnterMoney();
-            
+        }
+
+
+        public void BuySoda() /// if statement or switch case statement to buy a drink.
+        {
+
+        }
+
+    }
             
        
         
-    }
-}
+ }
+
