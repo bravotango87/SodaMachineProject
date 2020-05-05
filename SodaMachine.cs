@@ -22,6 +22,14 @@ namespace SodaMachineOOP
 
         // member methods (Can do)
 
+        public void RunMachine()
+        {
+            Console.WriteLine("What would you like to buy ?  Mountain Dew ? Crush ? Fanta ?");
+            string userDecision = Console.ReadLine().ToLower();
+            switch (userDecision)
+            {
 
+            }
+        }
     }
 }
