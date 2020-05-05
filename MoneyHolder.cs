@@ -27,7 +27,7 @@ namespace SodaMachine
             dimes = new List<Dime>();
             nickels = new List<Nickel>();
             quarters = new List<Quarter>();
-            MoneyInMachine();
+            
             
         }
 
@@ -38,9 +38,40 @@ namespace SodaMachine
 
       // member methods (Can do)
 
-        public void MoneyInMachine()
+        public void AddPennys(int numberOfPennies)
         {
+            for (int i = 0; i < numberOfPennies; i++)
+            {
+                Penny penny = new Penny();
+                pennies.Add(penny);
+            }
+        }
 
+        public void AddDimes(int numberOfDimes)
+        {
+            for (int i = 0; i < numberOfDimes; i++)
+            {
+                Dime dime = new Dime();
+                dimes.Add(dime);
+            }
+        }
+
+        public void AddNickles(int numberOfNickles)
+        {
+            for (int i = 0; i < numberOfNickles; i++)
+            {
+                Nickel nickel = new Nickel();
+                nickels.Add(nickel);
+            }
+        }
+
+        public void AddQuarters(int numberOfQuarters)
+        {
+            for (int i = 0; i < numberOfQuarters; i++)
+            {
+                Quarter quarter = new Quarter();
+                quarters.Add(quarter);
+            }
         }
     }
 }
