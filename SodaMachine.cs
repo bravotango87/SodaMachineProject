@@ -20,7 +20,15 @@ namespace SodaMachineOOP
       public SodaMachine()
         {
             inventory = new Inventory();
+            inventory.AddGrapeSoda(32);
+            inventory.AddLemonSoda(32);
+            inventory.AddOrangeSoda(32);
+
             moneyHolder = new MoneyHolder();
+            moneyHolder.AddDimes(10);
+            moneyHolder.AddNickles(20);
+            moneyHolder.AddPennys(50);
+            moneyHolder.AddQuarters(20);
         }
         
 
@@ -28,9 +36,28 @@ namespace SodaMachineOOP
 
         // member methods (Can do)
 
-        public void RunMachine()
+        public void RunWelcomeScreen()
         {
+            Console.WriteLine("Welcome To Brads Soda Machine !");
 
+            bool transactionComplete = false;
+            bool validPurchase = false;
+            while (transactionComplete == false)
+            {
+                do
+                {
+                    Console.WriteLine("What would you like to buy ? Orange Soda ? Lemon Soda ? Grape Soda ?");
+                    string userInput = Console.ReadLine().ToLower();
+                    switch (userInput)
+                    {
+                        case "orange soda":
+                            AddLemonSoda();
+                            validPurchase = true;
+                            break;
+                            
+                    }
+                }
+            }
         }
        
         
