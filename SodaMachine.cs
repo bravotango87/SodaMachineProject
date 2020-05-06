@@ -89,8 +89,10 @@ namespace SodaMachineOOP
                 {
                     Console.WriteLine("Crush soda coming down !");
                     inventory.orangeSodas.RemoveAt(0);
-                    moneyHolder.quarters.RemoveAt(0);
-                    moneyHolder.dimes.RemoveAt(0);
+                    for(int i = 0; i < inventory.orangeSodas.Count; i++)
+                    {
+                        inventory.orangeSodas[i] = inventory.orangeSodas[i + 1];
+                    }
                 } 
                 else if(amountEntered < amountRequired) // require more money
                 {
