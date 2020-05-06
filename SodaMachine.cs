@@ -89,14 +89,22 @@ namespace SodaMachineOOP
                 {
                     Console.WriteLine("Crush soda coming down !");
                     inventory.orangeSodas.RemoveAt(0);
+                    moneyHolder.quarters.RemoveAt(0);
+                    moneyHolder.dimes.RemoveAt(0);
                 } 
-                else if(amountEntered < amountRequired)
+                else if(amountEntered < amountRequired) // require more money
                 {
                     Console.WriteLine("Add more money");
+
+                    Console.WriteLine("What would you like to buy ? Orange Soda ? Grape Soda ? Lemon Soda ?");
                 }
                 else if(amountEntered == amountRequired && inventory.orangeSodas.Count < 0) // return money to customer
                 {
                     Console.WriteLine("Sorry ! There are no more Crush sodas. You're money will be returned");
+                }
+               else if // too much money, not enough change. give money back.
+                {
+
                 }
             }
         }
