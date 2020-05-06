@@ -1,9 +1,9 @@
-﻿using SodaMachine;
+﻿using SodaMachinOOP;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SodaMachineOOP
+namespace SodaMachinOOP
 {
     class SodaMachine
     {
@@ -13,7 +13,7 @@ namespace SodaMachineOOP
         MoneyHolder moneyHolder;
         public double amountEntered;
         public double amountRequired;
-        public string userInput;
+        
 
 
 
@@ -176,6 +176,7 @@ namespace SodaMachineOOP
         {
             Console.WriteLine("Hello and welcome to Brad's Soda Machine ! Hope you're thirsty !");
             Console.WriteLine("Choose from the following sodas: Mountain Dew, Fanta, and Crush");
+
 
         }
 

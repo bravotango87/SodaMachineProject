@@ -1,9 +1,9 @@
-﻿using SodaMachine;
+﻿using SodaMachinOOP;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SodaMachineOOP
+namespace SodaMachinOOP
 {
     class Nickel : Money
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SodaMachine
+namespace SodaMachinOOP
 {
      abstract  class Sodas
     {

@@ -1,9 +1,9 @@
-﻿using SodaMachineOOP;
+﻿using SodaMachinOOP;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SodaMachine
+namespace SodaMachinOOP
 {
     class MoneyHolder // coins
     {

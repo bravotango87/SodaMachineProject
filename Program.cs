@@ -1,19 +1,24 @@
-﻿using System;
+﻿using SodaMachinOOP;
+using System;
 
-namespace SodaMachineOOP
+namespace SodaMachinOOP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SodaMachine sodaMachine = new SodaMachine();
 
-            sodaMachine.DisplayScreen();
-            sodaMachine.EnterMoney();
-            sodaMachine.BuyGrapeSoda();
-            sodaMachine.BuyLemonSoda();
-            sodaMachine.BuyOrangeSoda();
 
+            SodaGame sodaGame = new SodaGame();
+            sodaGame.RunSodaGame();
+
+            GrapeSoda grapeSoda = new GrapeSoda();
+            LemonSoda lemonSoda = new LemonSoda();
+            OrangeSoda orangeSoda = new OrangeSoda();
+
+
+            sodaGame.SodaMachine.DisplayScreen();
+            sodaGame.SodaMachine.EnterMoney();
         }
     }
 }

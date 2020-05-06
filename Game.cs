@@ -4,9 +4,7 @@ using System.Text;
 
 namespace SodaMachinOOP
 {
-    abstract class Money
+    class Game
     {
-        public double cost;
     }
 }
-      

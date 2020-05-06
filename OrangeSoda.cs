@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SodaMachine
+namespace SodaMachinOOP
 {
     class OrangeSoda : Sodas
     {
         public OrangeSoda()
         {
             ProductName = "Crush";
-            Price = 35;
+            Price = .35;
         }
     }
 }
