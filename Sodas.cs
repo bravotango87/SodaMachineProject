@@ -8,5 +8,12 @@ namespace SodaMachine
     {
         public string ProductName;
         public double Price;
+
+
+
+        static Sodas()
+        {
+
+        }
     }
 }

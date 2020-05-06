@@ -34,6 +34,8 @@ namespace SodaMachineOOP
             moneyHolder.AddNickles(20);
             moneyHolder.AddPennys(50);
             moneyHolder.AddQuarters(20);
+
+            
         }
 
 
@@ -74,45 +76,78 @@ namespace SodaMachineOOP
 
         // add buy soda method
 
-        public void BuySoda()
+
+
+
+
+
+
+        public void BuyOrangeSoda()
         {
-            Console.WriteLine("What would you like to buy ? Orange Soda ? Grape Soda ? Lemon Soda ?");
-            string inputGiving = Console.ReadLine().ToLower();
-
-            
-
-
             amountRequired = 0.35;
-            if(inputGiving == "orange")
-            {
-                if(amountEntered == amountRequired && inventory.orangeSodas.Count > 0) // exact change send soda
+            int amountEntered;
+            amountEntered = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Please put in 35 cents");
+
+            if (amountEntered == amountRequired && inventory.orangeSodas.Count > 0) // exact change send soda
                 {
                     Console.WriteLine("Crush soda coming down !");
                     inventory.orangeSodas.RemoveAt(0);
-                    for(int i = 0; i < inventory.orangeSodas.Count; i++)
+                    for (int i = 0; i < inventory.orangeSodas.Count; i++)
                     {
                         inventory.orangeSodas[i] = inventory.orangeSodas[i + 1];
                     }
-                } 
-                else if(amountEntered < amountRequired) // require more money
+                }
+                else if (amountEntered < amountRequired) // require more money
                 {
                     Console.WriteLine("Add more money");
 
-                    Console.WriteLine("What would you like to buy ? Orange Soda ? Grape Soda ? Lemon Soda ?");
+                    
                 }
-                else if(amountEntered == amountRequired && inventory.orangeSodas.Count < 0) // return money to customer
+                else if (amountEntered == amountRequired && inventory.orangeSodas.Count < 0) // return money to customer
                 {
                     Console.WriteLine("Sorry ! There are no more Crush sodas. You're money will be returned");
                 }
-               else if // too much money, not enough change. give money back.
-                {
 
+
+
+            
+        }
+
+        public void BuyLemonSoda()
+        {
+            amountRequired = 0.6;
+            int amountEntered;
+            amountEntered = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please put in 6cents");
+            if(amountEntered == amountRequired && inventory.lemonSodas.Count > 0)
+            {
+                Console.WriteLine("Mountain coming down !");
+                inventory.lemonSodas.RemoveAt(0);
+                for(int i = 0; i < inventory.lemonSodas.Count; i++)
+                {
+                    inventory.lemonSodas[i] = inventory.lemonSodas[i + 1];
                 }
             }
+            else if(amountEntered < amountRequired)
+            {
+                Console.WriteLine("Please put in required amount ");
+            }
+            else if (amountEntered == amountRequired && inventory.lemonSodas.Count < 0)
+            {
+                Console.WriteLine("Sorry ! There is no more Mountain Dew");
+
+            }
         }
+    }
+}           
+           
      
             
        
         
- }
+ 
 
