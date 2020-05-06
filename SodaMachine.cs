@@ -13,7 +13,7 @@ namespace SodaMachineOOP
         MoneyHolder moneyHolder;
         public double amountEntered;
         public double amountRequired;
-        public string inputGiving;
+        public string userInput;
 
 
 
@@ -171,6 +171,14 @@ namespace SodaMachineOOP
             }
 
         }
+
+        public void DisplayScreen()
+        {
+            Console.WriteLine("Hello and welcome to Brad's Soda Machine ! Hope you're thirsty !");
+            Console.WriteLine("Choose from the following sodas: Mountain Dew, Fanta, and Crush");
+
+        }
+
     }
 }           
            
