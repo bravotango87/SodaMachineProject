@@ -118,11 +118,11 @@ namespace SodaMachineOOP
 
         public void BuyLemonSoda()
         {
-            amountRequired = 0.6;
+            amountRequired = 0.06;
             int amountEntered;
             amountEntered = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please put in 6cents");
+            Console.WriteLine("Please put in 6 cents");
             if(amountEntered == amountRequired && inventory.lemonSodas.Count > 0)
             {
                 Console.WriteLine("Mountain coming down !");
@@ -141,6 +141,35 @@ namespace SodaMachineOOP
                 Console.WriteLine("Sorry ! There is no more Mountain Dew");
 
             }
+        }
+
+
+        public void BuyGrapeSoda()
+        {
+            amountRequired = 0.60;
+            int amountEntered;
+            amountEntered = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please put in 60 cents");
+            if (amountEntered == amountRequired && inventory.grapeSodas.Count > 0)
+            {
+                Console.WriteLine("Fanta soda coming down !");
+                inventory.grapeSodas.RemoveAt(0);
+                for (int i = 0; i < inventory.grapeSodas.Count; i++)
+                {
+                    inventory.grapeSodas[i] = inventory.grapeSodas[i + 1];
+                }
+            }
+            else if (amountEntered < amountRequired)
+            {
+                Console.WriteLine("Please put in required amount");
+
+            }
+            else if (amountEntered == amountRequired && inventory.grapeSodas.Count < 0)
+            {
+                Console.WriteLine("Sorry ! Fanta soda is sold out");
+            }
+
         }
     }
 }           
